@@ -26,7 +26,7 @@ public class JwtTokenUtil {
         return claimsResolver.apply(claims);
     }
 
-    private String getUsernameFromToken(String token) {
+    public String getUsernameFromToken(String token) {
         return getClaimFromToken(token, Claims::getSubject);
     }
 
